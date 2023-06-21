@@ -1,0 +1,152 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidebar mode="side" opened>
+    <mat-nav-list>
+      <div class="user">
+        <img src="../../assets/img/CG-LOGO.png" alt="logo" />
+        <p>
+          <span class="name">Hospital</span><br />
+          <span claas="mail"></span>
+        </p>
+      </div>
+      <div class="menu-head">
+        <span>
+        <h6 class="dash" ><a mat-list-item routerLink="#"><mat-icon class="design_icon">dashboard</mat-icon>Dashboard</a></h6>
+        </span>
+      </div>
+      <mat-nav-list >
+        <mat-expansion-panel style="border-radius: 0%;background-color: rgb(25, 187, 245);" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">add_circle</mat-icon>
+              Entry Pages
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="ipdentry">IPD Entry</a>
+            <a mat-list-item routerLink="immunization">IMMUNIZAtion Entry</a>
+            <a mat-list-item routerLink="#">MIS Entry</a>
+          </mat-nav-list>
+        </mat-expansion-panel>  
+        <mat-expansion-panel style="border-radius: 0%;background-color: rgb(25, 187, 245);" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">cloud_download</mat-icon>
+              Report Pages
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a href="immunizationentry"> imm</a>
+            <a mat-list-item routerLink="ipdentry">IPD Entry</a>
+            <a mat-list-item routerLink="immunization">IMMUNIZAtion Entry</a>
+            <a mat-list-item routerLink="misreport">MIS Entry</a>
+          </mat-nav-list>
+        </mat-expansion-panel> 
+        <mat-nav-list style="border-radius: 0%;background-color: rgb(25, 187, 245);">
+          <h6 class="logout" ><a mat-list-item (click)="changepassword()"><mat-icon class="design_icon">lock</mat-icon>Change Password</a></h6>
+        </mat-nav-list>
+        <mat-nav-list>
+          <div class="menu-head">
+            <span>
+               <h6 class="logout" ><a mat-list-item (click)="logout()"><mat-icon class="design_icon">logout</mat-icon>LogOut</a></h6>
+            </span>
+          </div>
+        </mat-nav-list>
+        <!-- <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">domain</mat-icon>
+              Department
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="add-dept">Add Department</a>
+          </mat-nav-list>
+        </mat-expansion-panel>   
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">smartphone</mat-icon>
+              Project
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="add-project">Add Project</a>
+            <a mat-list-item routerLink="map-project-dept">Map Project Department</a>
+            <a mat-list-item routerLink="pro-post-allot">Project Post</a>
+            <a mat-list-item routerLink="financial-year-pos">Financial year Post</a>
+            <a mat-list-item routerLink="financial-post">Financial Post</a>
+            <a mat-list-item routerLink="map-post-emp">Map post-emp</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">add_task</mat-icon>
+              Task
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="project-module"> Module Detail</a>
+            <a mat-list-item routerLink="map-project-module">Map Pro-Module</a>
+            <a mat-list-item routerLink="project-work">Project Work</a>
+            <a mat-list-item routerLink="project-work-detail"> Work Detail</a>
+            <a mat-list-item routerLink="work-allotment"> Work Allotment</a>            
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">rule_setting</mat-icon>
+              Progress
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item>Project Progress</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">wallet</mat-icon>
+              Finance
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item>Funds</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">devices</mat-icon>
+              Resources
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="add-resource">Resources</a>
+            <a mat-list-item routerLink="assign-resource">Assign </a>
+            <a mat-list-item routerLink="resource-status"> Status</a>
+          </mat-nav-list>
+        </mat-expansion-panel> -->
+      </mat-nav-list>
+     
+      
+    </mat-nav-list>
+    
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="toolbar sticky-top nav">
+      <mat-toolbar>
+        <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+        <div class="box">
+          <mat-icon>search</mat-icon>
+        </div>
+      </mat-toolbar>
+    </div>
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+  
