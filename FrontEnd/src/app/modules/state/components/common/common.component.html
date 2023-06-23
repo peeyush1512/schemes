@@ -1,122 +1,537 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidebar mode="side" opened>
+  <mat-sidenav #sidebar mode="side" opened>
+    <mat-nav-list>
+      <div class="user">
+        <img src="../../../../../assets/logo/CG-LOGO.png" alt="logo" />
+        <p>
+          <span class="name">State</span><br />
+          <span claas="mail"></span>
+        </p>
+      </div>
+      <div class="menu-head">
+        <span>
+
+          <h6 class="dash"><a mat-list-item routerLink="dashboard"><mat-icon
+                class="design_icon">dashboard</mat-icon>Dashboard</a></h6>
+        </span>
+      </div>
+      <!-- Maternal Health -->
       <mat-nav-list>
-        <div class="user">
-          <img src="../../../../../assets/logo/CG-LOGO.png" alt="logo" />
-          <p>
-            <span class="name">State</span><br />
-            <span claas="mail">name</span>
-          </p>
-        </div>
-        <div class="menu-head">
-          <span>
-        
-          <h6 class="dash" ><a mat-list-item routerLink="content"><mat-icon class="design_icon">dashboard</mat-icon>Dashboard</a></h6>
-          </span>
-        </div>
-        <mat-nav-list>
-  <!-- button 0 -->
-          <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <mat-icon class="icon-design">domain</mat-icon>
-                Department
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-              <a mat-list-item routerLink="add-dept">Add Department</a>
-            </mat-nav-list>
-          </mat-expansion-panel>
-          <!-- button 1 -->
-          <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <mat-icon class="icon-design">smartphone</mat-icon>
-                Project
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-              <a mat-list-item routerLink="add-project">Add Project</a>
-              <a mat-list-item routerLink="map-project-dept">Map Project Department</a>
-              <a mat-list-item routerLink="pro-post-allot">Project Post</a>
-              <a mat-list-item routerLink="financial-year-pos">Financial year Post</a>
-              <a mat-list-item routerLink="financial-post">Financial Post</a>
-              <a mat-list-item routerLink="map-post-emp">Map post-emp</a>
-            </mat-nav-list>
-          </mat-expansion-panel>
-          <!-- button 2 -->
-          <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <mat-icon class="icon-design">add_task</mat-icon>
-                Task
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-              <a mat-list-item routerLink="project-module"> Module Detail</a>
-              <a mat-list-item routerLink="map-project-module">Map Pro-Module</a>
-              <a mat-list-item routerLink="project-work">Project Work</a>
-              <a mat-list-item routerLink="project-work-detail"> Work Detail</a>
-              <a mat-list-item routerLink="work-allotment"> Work Allotment</a>            
-            </mat-nav-list>
-          </mat-expansion-panel>
-  
-          <!-- button 2 -->
-          <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <mat-icon class="icon-design">rule_setting</mat-icon>
-                Progress
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-              <a mat-list-item>Project Progress</a>
-            </mat-nav-list>
-          </mat-expansion-panel>
-  
-          <!-- button 2 -->
-          <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <mat-icon class="icon-design">wallet</mat-icon>
-                Finance
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-              <a mat-list-item>Funds</a>
-            </mat-nav-list>
-          </mat-expansion-panel>
-  
-          <!-- button 2 -->
-          <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <mat-icon class="icon-design">devices</mat-icon>
-                Resources
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-nav-list>
-              <a mat-list-item routerLink="add-resource">Resources</a>
-              <a mat-list-item routerLink="assign-resource">Assign </a>
-              <a mat-list-item routerLink="resource-status"> Status</a>
-            </mat-nav-list>
-          </mat-expansion-panel>
-        </mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design">health_and_safety</mat-icon>
+              Maternal Health
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">VHSND/UHSND Monitoring</a>
+            <a mat-list-item routerLink="">ANC Registration against ELA</a>
+            <a mat-list-item routerLink="">ANC Registration within 1st trimester</a>
+            <a mat-list-item routerLink="">Pregnant Women received 4 or more ANC </a>
+            <a mat-list-item routerLink="">Treatment of severe anemia against detected</a>
+            <a mat-list-item routerLink="">IFA Distribution</a>
+            <a mat-list-item routerLink="">PW given one Albendazole tablet after 1st trimester</a>
+            <a mat-list-item routerLink="">PW received 360 calcium tablet</a>
+            <a mat-list-item routerLink="">Status of Institutional Delivery against PELA</a>
+            <a mat-list-item routerLink="">Status of ANC Vs Institutional Delivery</a>
+            <a mat-list-item routerLink="">Status of C-section against Institutional Delivery against PELA </a>
+            <a mat-list-item routerLink="">High Risk Pregnancy</a>
+            <a mat-list-item routerLink="">High Risk Pregnancy Identification</a>
+            <a mat-list-item routerLink="">Status of HRP reporting in the State</a>
+            <a mat-list-item routerLink="">HRP bifurcation State level</a>
+            <a mat-list-item routerLink="">Top 15 districts with more than 100 HRP registered in April and May</a>
+            <a mat-list-item routerLink="">FIRST REFERRAL UNIT (FRU)</a>
+            <a mat-list-item routerLink="">MCH Wing</a>
+            <a mat-list-item routerLink="">Status of JSY payment against ROP PELA</a>
+            <a mat-list-item routerLink="">Status of JSSK diet against ROP P.ELA </a>
+            <a mat-list-item routerLink="">Status of MDSR Review</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
       </mat-nav-list>
-    </mat-sidenav>
-  
-    <mat-sidenav-content>
-      <div class="toolbar sticky-top nav">
-        <mat-toolbar>
-          <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
-          <div class="box">
-            <mat-icon>search</mat-icon>
-          </div>
-        </mat-toolbar>
-      </div>
-      <div class="main">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
+      <!-- Blood services -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              blood services
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Blood Transfusion Services in State - Facilities</a>
+            <a mat-list-item routerLink="">State Scenario –Blood Collection </a>
+            <a mat-list-item routerLink="">Blood Collection in Chhattisgarh State  (April 2022 to March 2023)</a>
+            <a mat-list-item routerLink="">Blood Collection in Chhattisgarh State (April -May 2023)</a>
+            <a mat-list-item routerLink="">Status of Blood Storage Units in FRU CHCs & CHs</a>
+            <a mat-list-item routerLink="">Govt Blood Center Camp Collection April 22- March 23</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- sickle cell disorder manegement  program -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Sickle Cell Disorder Management Program
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink=""> Sickle Cell screening in Sickle Cell Prabandhan unit</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- PC & PNDT -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              PC & PNDT
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">INSPECTION OF EACH CENTERS IN EVERY QUARTER</a>
+            <a mat-list-item routerLink="">DISTRICT ADVISORY COMMITTEE MEETING IN EVERY 2 MONTHS</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- child Health (FBNC) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Child Health (FBNC)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item>SNCU Admission, BOR & Outcome</a>
+            <a mat-list-item>Cause of Death Profile April 2023 to May 2023</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!--  Child Health Nutrition, HBNC & HBYC -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Child Health Nutrition, HBNC & HBYC
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Bed Occupancy Rate at Nutrition Rehabilitation Centers</a>
+            <a mat-list-item routerLink="">Successful Discharge Rate at Nutrition Rehabilitation Centres</a>
+            <a mat-list-item routerLink="">Nutrition Rehabilitation Center</a>
+            <a mat-list-item routerLink="">AMB_% of Children 6-59 months given 8-10 doses of IFA syrup every month</a>
+            <a mat-list-item routerLink="">% of Children 5-9 years given 4-5 IFA tablets every month</a>
+            <a mat-list-item routerLink="">Coverage of in- school beneficiaries under WIFS Programme</a>
+            <a mat-list-item routerLink="">Coverage of out- of-school (girls) under WIFS Programme</a>
+            <a mat-list-item routerLink="">Anemia Mukt Bharat (AMB)</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- Rashtriya Bal Swasthya Karyakram(Chirayu) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Rashtriya Bal Swasthya Karyakram(Chirayu)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Status of children Screening (School + AWC) 2022-23 (Data Source- RBSK Portal)</a>
+            <a mat-list-item routerLink="">Status of AWC visited & children Screening (April & May 2023-24)</a>
+            <a mat-list-item routerLink="">Treatment Status in all Category (A,B,C,D,E) 2023-24 April & May</a>
+            <a mat-list-item routerLink="">Observation/Issues and Recommendations</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!--  Routine Immunization -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Routine Immunization
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Full Immunization Coverage in %</a>
+            <a mat-list-item routerLink="">Adherence to Open vial policy</a>
+            <a mat-list-item routerLink="">Discard of RI vaccine doses</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- Adolescent Health -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Adolescent Health
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Training of Health and wellness ambassador(SHWP)</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- Family Planning  -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Family Planning
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Permanent FP Services Status:- (Apr 23 to May 2023)</a>
+            <a mat-list-item routerLink="">Spacing FP Services Status:- (Apr 23 to May 2023)</a>
+            <a mat-list-item routerLink="">PPIUCD Acceptance %</a>
+            <a mat-list-item routerLink="">% Injectable MPA users among eligible couples</a>
+            <a mat-list-item routerLink="">Key FP Priorities</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National  Tuberculosis Elimination Programme (NTEP) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Tuberculosis Elimination Programme (NTEP)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Suspect Examination Rate – Jan to March 2023</a>
+            <a mat-list-item routerLink="">Percentage of Notification achieved against Target Jan to May 2023</a>
+            <a mat-list-item routerLink="">Success Rate Jan to May 2023</a>
+            <a mat-list-item routerLink="">NPY Payment Jan to May 2023</a>
+            <a mat-list-item routerLink="">Adoption status of TB patients by Nikshay Mitra Sep 2022 to May 2023</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Leprosy Eradication Programme -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Leprosy Eradication Programme
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">New Case ( April & May 2023) F.Y. 2023-24</a>
+            <a mat-list-item routerLink="">Adoption status of TB patients by Nikshay Mitra Sep 2022 to May 2023+D62</a>
+            <a mat-list-item routerLink="">Percentage of G2D among new case</a>
+            <a mat-list-item routerLink="">Percentage of Child case among new case</a>
+            <a mat-list-item routerLink="">Percentage of MB case among new case</a>
+            <a mat-list-item routerLink="">Status of Eligible cases for RCS and RCS performed Till May 2023 –F.Y. 2023-24</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Vector Borne Disease Control Programme (NVBDCP) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Vector Borne Disease Control Programme (NVBDCP)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Target vs Achievement (Blood Slide + RDT) (January to May 2023)</a>
+            <a mat-list-item routerLink="">Indoor Residual Spray : Population Coverage in 2nd round 2022</a>
+            <a mat-list-item routerLink="">Dengue Cases 01.01.2023 to 08.06.2023</a>
+            <a mat-list-item routerLink="">Morbidity Management : Disease Prevention services for Lymphedema cases (January to December 2022)</a>
+            <a mat-list-item routerLink="">Morbidity Management Status (January to March 2023)</a>
+            <a mat-list-item routerLink="">Hydrocelectomy Status (January to March 2023)</a>
+            <a mat-list-item routerLink="">Acute Encephalitis Syndrome/Japanese Encephalitis January to December 2022 & 01.01.2023 to 08.06.2023</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- Integrated Disease Surveillance Programme (IDSP) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Integrated Disease Surveillance Programme (IDSP)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">IHIP Reporting Status (April-May 2023)</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Program For Control Of Blindness And Vision Impairment (NPCB +VI) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Program For Control Of Blindness And Vision Impairment (NPCB +VI)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Cataract Surgery Public Sector & Pvt Sector against ELA (April 2022 to March 2023)
+              (GOI Target 1.08 Lakh Achiv 135113=125%) & (District Distributaion Target 1.25 Lakh Achiv 135113=108%)</a>
+            <a mat-list-item routerLink="">School Eye Screening (Provided Free Glasses) Apr-Mar 2022-23 
+              State Average –107%</a>
+            <a mat-list-item routerLink="">Cataract Surgery Public Sector & Pvt Sector against ELA (April to May 2023)</a>
+            <a mat-list-item routerLink="">School Eye Screening (Provided Free Glasses) April to May 2023 (School Vacation going on)</a>
+            <a mat-list-item routerLink="">Cataract backlog Free District Year 2022-23 </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Programme for Prevention and Control of Diabetes, Cardiovascular Disease and Stroke (NPCDCS) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Programme for Prevention and Control of Diabetes, Cardiovascular Disease and Stroke (NPCDCS)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">National NCD Portal Active User Status from 1st June 2023 till 7th June 2023</a>
+            <a mat-list-item routerLink="">NEW ENROLMENT STATUS- APRIL TO MAY 2023</a>
+            <a mat-list-item routerLink="">ABHA ID STATUS (APR 2023 - MAY 2023)</a>
+            <a mat-list-item routerLink="">NATIONAL NCD PORTAL SCREENING STATUS- APRIL TO MAY 2023</a>
+            <a mat-list-item routerLink="">NATIONAL NCD PORTAL RE- SCREENING STATUS- APRIL TO MAY 2023</a>
+            <a mat-list-item routerLink="">NATIONAL NCD PORTAL NEW DIABETES TREATMENT STATUS- APRIL TO MAY 2023</a>
+            <a mat-list-item routerLink="">NATIONAL NCD PORTAL DIABETES FOLLOW-UP STATUS- APRIL TO MAY 2023</a>
+            <a mat-list-item routerLink="">NATIONAL NCD PORTAL NEW HYPERTENSION ON TREATMENT STATUS- APRIL TO MAY 2023</a>
+            <a mat-list-item routerLink="">NATIONAL NCD PORTAL HYPERTENSION FOLLOW-UP STATUS- APRIL TO MAY 2023</a>
+            <a mat-list-item routerLink="">STATUS DAYCARE CHEMOTHERAPY FUNCTIONALITY 2023-24</a>
+            <a mat-list-item routerLink="">DAYCARE CHEMOTHERAPY APRIL AND MAY 2023</a>
+            <a mat-list-item routerLink="">CERVICAL CANCER SCREENING IN DH AND PRECANCER TREATMENT 2023-24</a>
+            <a mat-list-item routerLink="">Cervical cancer screening and precancer treatment- April and May 2023</a>
+            <a mat-list-item routerLink="">HEART ATTACK(STEMI) THROMBOLYSIS TREATMENT AVAILABILITY STATUS -2023-24</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Mental Health Program (NMHP) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Mental Health Program (NMHP)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">DISTRICT HOSPITAL MENTAL HEALTH OPD (APRIL AND MAY 2023-24)</a>
+            <a mat-list-item routerLink="">NMHP DISTRICT HOSPITAL IPD/DAYCARE FACILITY APRIL and May 2023-24</a>
+            <a mat-list-item routerLink="">CHC AND PHC MENTAL HEALTH OPD 2023-24 (APRIL AND MAY 2023)</a>
+            <a mat-list-item routerLink="">MENTAL HEALTH SCREENING AT HWC -2023-24 (APRIL AND MAY 2023)</a>
+            <a mat-list-item routerLink="">Report of Dialysis unit Under PMNDP April & May 2023</a>
+            <a mat-list-item routerLink="">PMNDP Portal Entry Status District Wise</a>
+            <a mat-list-item routerLink="">Pradhan Mantri National Dialysis Program (PMNDP)</a>
+            <a mat-list-item routerLink="">Status of Dialysis Unit in Other Source (DMF/CSR/JDS)</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Oral health programme(NOHP) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Oral health programme(NOHP)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">NATIONAL ORAL HEALTH- Status of OPD to the patient (April to May 23)</a>
+            <a mat-list-item routerLink="">Status of dental procedures to the patients (April to May 2023)</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Programme for Health Care for the Elderly (NPHCE)-->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Programme for Health Care for the Elderly (NPHCE)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Geriatric (Elderly) Ward Status</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Tobacco Control Programme(NTCP) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Tobacco Control Programme(NTCP)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Achievements of Tobacco Cessation Center (TCC) OPD</a>
+            <a mat-list-item routerLink="">TCC OPD targets @150 per month (1800 Anually)</a>
+            <a mat-list-item routerLink="">Tobacco Free Educational Institution -TOFEI Status</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Program for Prevention and Control of Deafness (NPPCD) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Program for Prevention and Control of Deafness (NPPCD)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">Audiometry Facilities</a>
+            <a mat-list-item routerLink="">Number of cases Investigations</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- Comprehensive Primary Healthcare (CPHC) -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Comprehensive Primary Healthcare(CPHC)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">HWCs Operational Status 31-03-2023</a>
+            <a mat-list-item routerLink="">Average Number of Medicine Available in SHC HWC</a>
+            <a mat-list-item routerLink="">Average Number of Medicine Available in PHC HWC</a>
+            <a mat-list-item routerLink="">Average Number of Diagnostics Available in SHC HWC</a>
+            <a mat-list-item routerLink="">Average Number of Diagnostics Available in PHC HWC</a>
+            <a mat-list-item routerLink="">Wellness Activity (1 April 2023 to 31 May 2023) Average Per HWC/Month (Need To Average 50 Activity Per Month Per HWC)</a>
+            <a mat-list-item routerLink="">FY. 22-23 eSanjeevani 2.0 Consultation Completed (50 Consultation Per facility/per month) 1/04/2023 - 31/05/2023</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- National Urban Health Mission -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              National Urban Health Mission
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">UHWC Operational Status</a>
+            <a mat-list-item routerLink="">UHWC HR Status</a>
+            <a mat-list-item routerLink="">Polyclinic OPD And Visit Status April to May 2023</a>
+            <a mat-list-item routerLink="">OPD Status (April to May 2023-24) 2 Months</a>
+            <a mat-list-item routerLink="">Delivery Status (April to May 2023-24) 2 Months</a>
+            <a mat-list-item routerLink="">Lab test Status (April to May 2023-24) 2 Months</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- मुख्यमंत्री हाट बाजार क्लिनिक योजना  -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              मुख्यमंत्री हाट बाजार क्लिनिक योजना
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">चिन्हित हाट बाजार मे latitude  & longitude  की स्थिति </a>
+            <a mat-list-item routerLink="">जिलेवार वाहन पँहुचने की स्थिति </a>
+            <a mat-list-item routerLink="">जिलेवर मरीजों के रेफर एंट्री के विरुद्ध ट्रीटमेंट की स्थिति </a>
+            <a mat-list-item routerLink="">जिलेवर प्रति हाट बाजार उपचारित मरीजों की औसत संख्या </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- NHM - Finance  -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              NHM - Finance
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">राष्ट्रीय स्वरथ्या मिशन , वित्तीय प्रगति रिपोर्ट मार्च 2023 तक (fy 2022 - 2023) लाख में </a>
+            <a mat-list-item routerLink="">समस्त जिला वित्तीय रिपोर्ट मार्च 23 तक (fy 2022-23 ) लाख में </a>
+            <a mat-list-item routerLink="">National Health Mission, Chhattisgarh RANKING as per FMR Report as on March 2023 (FY 2022-23) .In Lakh</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- NHM - Financial Progress Report Till the Month Of MAY 2023 (F Y 2023-24)  -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              NHM - Financial Progress Report Till the Month Of MAY 2023 (F Y 2023-24)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">राष्ट्रीय स्वरथ्या मिशन , वित्तीय प्रगति रिपोर्ट मई  2023 तक (fy 2022 - 2023) लाख में </a>
+            <a mat-list-item routerLink="">National Health Mission, Chhattisgarh RANKING as per FMR Report as on MAY 2023 (FY 2023-24) In Lakh</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+      <!-- Chhattisgarh State AIDS Control Society -->
+      <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              Chhattisgarh State AIDS Control Society
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">District Wise Contractual VACANT Post under AIDS Control Programme (NACO-CGSACS)</a>
+            <a mat-list-item routerLink="">HIV - TB coordination committee meeting</a>
+            <a mat-list-item routerLink="">HIV-TB Cross referral 2022-23</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+       <!-- NABL Certification of ICTC  -->
+       <mat-nav-list>
+        <mat-expansion-panel style="border-radius: 0%;" class="mat-elevation-z0">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="icon-design"></mat-icon>
+              NABL Certification of ICTC
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-nav-list>
+            <a mat-list-item routerLink="">NABL Certification Status of ICTCs_Chhattisgarh</a>
+            <a mat-list-item routerLink="">Documents Required for NABL Certification</a>
+            <a mat-list-item routerLink="">District wise LFU & Viral Load Pendency</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-nav-list>
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="toolbar sticky-top nav">
+      <mat-toolbar>
+        <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+        <div class="box">
+          <mat-icon>search</mat-icon>
+        </div>
+      </mat-toolbar>
+    </div>
+    <div class="main">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

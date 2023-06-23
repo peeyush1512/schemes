@@ -15,22 +15,14 @@ export class LoginComponent {
     // public returnuser : any ;
     
     constructor(
-        private formBuilder: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
-        // private loginService:LoginService,
+        private formBuilder: FormBuilder, private route: ActivatedRoute,
+        private router: Router ,private LoginService:LoginService
         // private toastr :ToastrService
         // private authenticationService: AuthenticationService
-    ){ 
-        
-    }
+    ){  }
     
 
     ngOnInit() {
-          
-      // if(localStorage.getItem('user')){
-      //   this.router.navigate(['home']);
-      // }
         this.loginForm = this.formBuilder.group({
             name: ['', [Validators.required]],
             password: ['', [Validators.required]]
@@ -39,37 +31,39 @@ export class LoginComponent {
     }
 
     //login user
-    public loginuser() {
+  public loginuser() {
         this.getjson={
             "username":this.loginForm.controls['name'].value,
             "password":this.loginForm.controls['password'].value
             
         }
-        // this.loginService.loginuser(this.getjson).subscribe((results : any )=>{
-        //   if(results.message){
-        //         alert(results.message) 
-        //         // this.toastr.info(results.message);
-        //           this.router.navigate(['login']);
-        //     }
-        //     else{              
-        //       if(results[0].name){
-        //         // this.toastr.success(results[0].name,"Welcome");
-        //         localStorage.setItem('user',results[0].id)
-        //         if(results[0].role==1 || results[0].role==2){
-        //           this.router.navigate(['home']);
-        //         }else if(results[0].role==3){
-        //           this.router.navigate(['loginhospital']);
-        //         }
-        //         else{
-        //           this.router.navigate(['demotest']);
-        //         } 
-        //       }
-        //       else{
-        //         //  this.toastr.error(results);
-        //          this.router.navigate(['login']);
-        //       }            
-        //     }      
-        // })  
+        this.LoginService.loginuser(this.getjson).subscribe((results : any )=>{
+          if(results.message){
+                alert(results.message) 
+                // this.toastr.info(results.message);
+                  this.router.navigate(['login']);
+            }
+            else{              
+              if(results[0].name){
+                // this.toastr.success(results[0].name,"Welcome");
+                localStorage.setItem('user',results[0].id)
+                if(results[0].role==1){
+                  this.router.navigate(['state']);
+                }else if(results[0].role==2){
+                  this.router.navigate(['district']);
+                }else if(results[0].role==3){
+                  this.router.navigate(['hospital']);
+                }
+                else{
+                  this.router.navigate(['pagenotfound']);
+                } 
+              }
+              else{
+                //  this.toastr.error(results);
+                 this.router.navigate(['login']);
+              }            
+            }      
+        })  
     }
     public registration_page() {
       this.router.navigate(['registration']);

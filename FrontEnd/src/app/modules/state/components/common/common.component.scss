@@ -2,7 +2,7 @@
     }
 .mat-sidenav{
     background:white(255, 255, 255);
-    width: 230px;
+    width:250px;
     height: 100%;
 }
 
@@ -30,9 +30,17 @@ mat-toolbar{
         margin-top: 8px;
     }
 }
-
-
-
+mat-expansion-panel-header{
+  height: fit-content;
+}
+a:hover{
+  width: 700px;
+  
+}
+mat-list-item{
+  width: fit-content;
+  height: fit-content;
+}
 .user{
     font-size: 13px;
     text-align: center;

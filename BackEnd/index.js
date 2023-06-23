@@ -3,7 +3,7 @@ require('dotenv').config();
 let cors =require('cors');
 const bodyParser = require('body-parser')
 const connection = require('./connection');
-
+const login=require('./routes/login');
 
 
 
@@ -19,13 +19,14 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 
+app.use('/login',login);
 
 
 
 
-app.get('user',(req,res)=>{
-    return res.json({hello:"hello"})
-})
+
+
+
 
 app.listen(process.env.PORT_SERVER || 3000 );
 module.exports = app;
