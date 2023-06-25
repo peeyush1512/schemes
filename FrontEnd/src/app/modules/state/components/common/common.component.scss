@@ -1,8 +1,7 @@
-#sidebar{
-    }
+
 .mat-sidenav{
     background:white(255, 255, 255);
-    width:250px;
+    width:50vh;
     height: 100%;
 }
 
@@ -34,12 +33,17 @@ mat-expansion-panel-header{
   height: fit-content;
 }
 a:hover{
-  width: 700px;
+  width: 100vh;
   
 }
 mat-list-item{
   width: fit-content;
   height: fit-content;
+}
+.logout{
+  float: right!important;
+    padding-right:25%;
+    cursor: pointer;
 }
 .user{
     font-size: 13px;
@@ -100,7 +104,7 @@ mat-list-item{
         border-radius: 5px;
         margin: 0 8px;
         &:hover {
-          background: #2c3344 !important;
+          background: #212630 !important;
         }
       }
     }

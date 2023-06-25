@@ -21,6 +21,6 @@
     "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^1.14.9"
   }
 }

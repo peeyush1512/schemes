@@ -5,7 +5,7 @@
         <img src="../../../../../assets/logo/CG-LOGO.png" alt="logo" />
         <p>
           <span class="name">State</span><br />
-          <span claas="mail"></span>
+          <span claas="mail">{{username.name}}</span>
         </p>
       </div>
       <div class="menu-head">
@@ -516,7 +516,12 @@
           </mat-nav-list>
         </mat-expansion-panel>
       </mat-nav-list>
-
+      <!-- logout -->
+      <mat-nav-list>
+      <mat-nav-list>
+          <span class="logout"><a (click)="logout()"> <mat-icon>logout</mat-icon> LogOut</a></span>
+      </mat-nav-list>
+      </mat-nav-list>
 
     </mat-nav-list>
   </mat-sidenav>
