@@ -16,12 +16,14 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
+import { VHSNDUHSNDMonitoringComponent } from './components/vhsnd-uhsnd-monitoring/vhsnd-uhsnd-monitoring.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     CommonComponent,
+    VHSNDUHSNDMonitoringComponent,
   ],
   imports: [
     CommonModule,
