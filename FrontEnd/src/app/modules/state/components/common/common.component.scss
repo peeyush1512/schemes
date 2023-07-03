@@ -31,10 +31,18 @@ mat-toolbar{
 }
 mat-expansion-panel-header{
   height: fit-content;
+  text-align: left;
 }
 a:hover{
   width: 100vh;
   
+}
+mat-panel-title{
+  float: right;
+  text-align: left;
+}
+a{
+  text-align: left;
 }
 mat-list-item{
   width: fit-content;
