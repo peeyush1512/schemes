@@ -8,6 +8,9 @@ const connection = require('./connection');
 const login=require('./routes/login');
 const captcha=require('./routes/captcha');
 const profile=require('./routes/profile');
+const reports=require('./routes/reports');
+const forms=require('./routes/forms');
+const api=require('./routes/api');
 
 
 
@@ -26,6 +29,9 @@ app.use(bodyParser.json());
 app.use('/login',login);
 app.use('/captcha',captcha);
 app.use('/profile',profile);
+app.use('/api',api);
+app.use('/forms',forms);
+app.use('/reports',reports);
 
 
 

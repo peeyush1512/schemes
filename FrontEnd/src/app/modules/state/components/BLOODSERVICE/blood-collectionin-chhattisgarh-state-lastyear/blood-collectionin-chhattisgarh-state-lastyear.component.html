@@ -1,1 +1,61 @@
-<p>blood-collectionin-chhattisgarh-state-lastyear works!</p>
+<div class="card">
+    <mat-card>
+        <div mat-card>
+            <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+              <ng-container matColumnDef="index">
+                <th mat-header-cell *matHeaderCellDef> S.No. </th>
+                <td mat-cell *matCellDef="let element; let i = index;" >{{i+1}}</td>
+              </ng-container>
+                <ng-container matColumnDef="district">
+                  <th mat-header-cell *matHeaderCellDef>District Name</th>
+                  <!-- style="background-color: green;" -->
+                  <td mat-cell *matCellDef="let element">
+                         {{element.district}}
+                  </td>
+                </ng-container>
+                  <ng-container matColumnDef="target">
+                    <th mat-header-cell *matHeaderCellDef> 12 months 
+                        target</th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.target}}
+                  </td>
+                  </ng-container>
+                  
+                  <ng-container matColumnDef="TVCollection">
+                    <th mat-header-cell *matHeaderCellDef>Total Voluntary 
+                        Collection  </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.TVCollection}}
+                  </td>
+                  </ng-container>  
+                  <ng-container matColumnDef="TRCollection">
+                    <th mat-header-cell *matHeaderCellDef>Total 
+                        Replacement 
+                        Collection </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.TRCollection}}
+                  </td>
+                  </ng-container>
+                  <ng-container matColumnDef="GTBCollection">
+                    <th mat-header-cell *matHeaderCellDef> Grand Total 
+                        Blood Collection
+                        </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.GTBCollection}}
+                  </td>
+                  </ng-container>
+                  <ng-container matColumnDef="percentage">
+                    <th mat-header-cell *matHeaderCellDef> Percentage Collection 
+                        Against Target</th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.percentage}}
+                  </td>
+                  </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                
+              </table>
+              
+        </div>
+    </mat-card>
+</div>

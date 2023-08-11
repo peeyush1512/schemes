@@ -1,1 +1,34 @@
-<p>new-case-fy works!</p>
+<div class="card">
+  <div class="row">
+    <div class="table">
+      <table mat-table [dataSource]="data1" class="mat-elevation-z8">
+        <ng-container matColumnDef="index">
+          <th mat-header-cell *matHeaderCellDef>S. No. </th>
+          <!-- style="background-color: green;" -->
+          <td mat-cell *matCellDef="let element; let i = index">
+            {{i+1}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="district">
+          <th mat-header-cell *matHeaderCellDef>District </th>
+          <!-- style="background-color: green;" -->
+          <td mat-cell *matCellDef="let element">
+            {{element.district}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="newcase">
+          <th mat-header-cell *matHeaderCellDef> New Cases </th>
+          <td mat-cell *matCellDef="let element">
+            {{element.newcase}}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <div class="chart">
+      <canvas id="chart1" height="500px" width="950px">{{chart1}}</canvas>
+  </div>
+  </div>
+</div>

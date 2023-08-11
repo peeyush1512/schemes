@@ -1,123 +1,183 @@
-#sidebar{
-    }
+
 .mat-sidenav{
-    background:white(255, 255, 255);
-    width: 230px;
-    height: 100%;
+  background:white(255, 255, 255);
+  width:60vh;
+  height: 120vh;
 }
 
+mat-sidenav-container{
+height: 100%;
+margin-bottom: 40px;
+}
 .nav{
-    position: sticky;
-    top: 0;
-    }
-
+  position: sticky;
+  top: 0;
+  }
 mat-sidenav-content{
-    height: 100vh;
-    background: rgb(250, 252, 252);
-    .main{
-        margin-left: 25px;
-    }
+  height: 120vh ;
+  // margin-bottom: 100px;
+  background: rgb(250, 252, 252);
+  .main{
+      margin-left: 25px;
+  }
+}
+.thisactive{
+font-weight: bold!important;;
+background-color: aquamarine;
 }
 
 mat-toolbar{
-    mat-icon{
-        margin-left: 15px;
-        color: grey;
-    }
-    justify-content: space-between;
+  
+  background-color: #030a8f;
+  mat-icon{
+      margin-left: 15px;
+      color: rgb(5, 5, 5);
+  }
+  justify-content: space-between;
 
-    .box{
-        margin-top: 8px;
-    }
+  .box{
+      margin-top: 8px;
+  }
 }
 
+mat-expansion-panel-header{
+height: fit-content;
+text-align: left;
+}
+a{
+// position: relative;
+// display: inline-block;
+// border-bottom: 1px dotted black;
+text-align: left;
+}
+.headertop{
+margin-bottom: 10px;
+}
+.leftfloat{
+float: left!important;
+}
+// a:hover .tooltiptext{
+//   visibility: visible;
 
+// }
 
+// a .tooltiptext {
+//   visibility: hidden;
+//   overflow: show;
+//   width: 250px;
+//   background-color: black;
+//   color: #fff;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 5px 0;
+
+//   /* Position the tooltip */
+//   position: left;
+//   z-index: 1;
+// }
+
+mat-panel-title{
+float: right;
+text-align: left;
+}
+
+mat-list-item{
+width: fit-content;
+height: fit-content;
+}
+.logout{
+float: right!important;
+  padding-right:5%;
+  cursor: pointer;
+}
+.logout:hover{
+background-color:#54e8f0 ;
+}
 .user{
-    font-size: 13px;
-    text-align: center;
-    font-weight: 600;
-    img{
-        margin-top: 15px;
-        height: 30px;
-        width: 30px;
-    }
+  font-size: 13px;
+  text-align: center;
+  font-weight: 600;
+  img{
+      margin-top: 15px;
+      height: 30px;
+      width: 30px;
+  }
 
-    .name{
-        color: rgb(85, 80, 80);
-    }
-    .mail{
-        font-size: smaller;
-        color: rgb(150, 144, 144);
-    }
+  .name{
+      color: rgb(85, 80, 80);
+  }
+  .mail{
+      font-size: smaller;
+      color: rgb(150, 144, 144);
+  }
 }
 
 .menu-head{
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-left: 30px;
-    color: #030410;
-    font-size: 0.6rem;
-    letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 30px;
+  color: #030410;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
 
 }
 
 :host {
-    .mat-icon {
-      vertical-align: middle;
-      margin-right: 1rem;
-    }
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 1rem;
   }
-  .logo {
-    text-align: center;
-    padding: 2.6rem 1rem;
-    img {
-      width: 200px;
-    }
+}
+.logo {
+  text-align: center;
+  padding: 2.6rem 1rem;
+  img {
+    width: 200px;
   }
-  .mat-divider {
-    border-top-width: 2px;
-    border-color: white;
+}
+.mat-divider {
+  border-top-width: 2px;
+  border-color: white;
+}
+.mat-list-item {
+  color: #94a3b8 !important;
+  font-size: 0.8rem;
+  height: 44px !important;
+  margin-bottom: 4px;
+  &:hover {
+    color: #f2f5f7 !important;
   }
-  .mat-list-item {
-    color: #94a3b8 !important;
-    font-size: 0.8rem;
-    height: 44px !important;
-    margin-bottom: 4px;
-    &:hover {
-      color: #f2f5f7 !important;
-    }
-    ::ng-deep {
-      .mat-list-item-content {
-        border-radius: 5px;
-        margin: 0 8px;
-        &:hover {
-          background: #2c3344 !important;
-        }
+  ::ng-deep {
+    .mat-list-item-content {
+      border-radius: 5px;
+      margin: 0 8px;
+      &:hover {
+        background: #212630 !important;
       }
     }
   }
-  .list-item-active {
-    // background: blue !important;
-    // border-radius: 0 2rem 2rem 0;
-    // &:hover {
-    //   background: blue;
-    // }
-  
-    color: #f2f5f7 !important;
-    ::ng-deep {
-      .mat-list-item-content {
+}
+.list-item-active {
+  // background: blue !important;
+  // border-radius: 0 2rem 2rem 0;
+  // &:hover {
+  //   background: blue;
+  // }
+
+  color: #f2f5f7 !important;
+  ::ng-deep {
+    .mat-list-item-content {
+      background: #2c3344 !important;
+      &:hover {
         background: #2c3344 !important;
-        &:hover {
-          background: #2c3344 !important;
-        }
-     }
-    }
+      }
+   }
+  }
 }
 
 
 .dash{
-  margin-left: -28px;
-  margin-bottom: -10px;
-  background: white;
+margin-left: -28px;
+margin-bottom: -10px;
+background: white;
 }

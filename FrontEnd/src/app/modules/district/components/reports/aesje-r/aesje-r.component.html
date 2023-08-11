@@ -1,0 +1,57 @@
+<div>
+   <h1 class="justify-center">Acute Encephalitis Syndrome/Japanese Encephalitis</h1>
+    <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+        <ng-container matColumnDef="index">
+          <th mat-header-cell *matHeaderCellDef>S. No.</th>
+          <td mat-cell *matCellDef="let i=index" style="background-color: Green ;" > 
+            {{i+1}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="district">
+          <th mat-header-cell *matHeaderCellDef>District</th>
+          <td mat-cell *matCellDef="let element" style="background-color: Green ;" > 
+            {{element.district}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="laescase">
+          <th mat-header-cell *matHeaderCellDef>Last Year AES Cases</th>
+          <td mat-cell *matCellDef="let element"style="background-color: Green ;">
+                        {{element.laescase}}  
+        </td>
+        </ng-container>
+        <ng-container matColumnDef="ljecase">
+          <th mat-header-cell *matHeaderCellDef>Last Year JE Cases</th>
+          <td mat-cell *matCellDef="let element"style="background-color: Green ;">
+                         {{element.ljecase}}
+        </td>
+        </ng-container>
+        <ng-container matColumnDef="ldeath">
+          <th mat-header-cell *matHeaderCellDef>Last Year Death</th>
+          <td mat-cell *matCellDef="let element"style="background-color: Green ;">
+                         {{element.ldeath}}
+        </td>
+        </ng-container>
+        <ng-container matColumnDef="taescase">
+          <th mat-header-cell *matHeaderCellDef>This Year AES Cases</th>
+          <td mat-cell *matCellDef="let element"style="background-color: Green ;">
+                           {{element.taescase}}
+        </td>
+        </ng-container>
+        <ng-container matColumnDef="tjecase">
+          <th mat-header-cell *matHeaderCellDef>This Year AES Cases</th>
+          <td mat-cell *matCellDef="let element"style="background-color: Green ;">
+                         {{element.tjecase}}
+        </td>
+        </ng-container>
+        <ng-container matColumnDef="tdeath">
+          <th mat-header-cell *matHeaderCellDef>This Year Death</th>
+          <td mat-cell *matCellDef="let element"style="background-color: Green ;">
+                           {{element.tdeath}}
+        </td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+</div>

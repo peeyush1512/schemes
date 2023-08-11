@@ -34,7 +34,47 @@ router.post('/login', (req, res) => {
     })
 })
 
+router.get('/getrole/:id',(req,res)=>{
+    let id=req.params.id;
+    let query= 'select username,role from registration where id=?';
+    connection.query(query,[id],(err,result)=>{
+        if(!err){
+            if(result.length > 0){
+                return res.json(result)
+            }else{
+                return res.json({message:'Invalid User ',navigate:'login'});
+            }
+        }
+    })
+})
+
 router.get('/usertype/:id',(req,res)=>{
+    let id = req.params.id;
+    let query="select username,role from registration where id=?";
+    connection.query(query,[id],(err,result)=>{
+        if(!err){
+            if(result.length>0){
+                if(result[0].role == 1 ){
+                    return res.json({message:"state",navigate:"state",result});
+                }else if(result[0].role == 2){
+                    return res.json({message:"district",navigate:"district",result});
+                }else if(result[0].role == 3){
+                    return res.json({message:"hospital",navigate:"hospital",result});
+                }else{
+                    return res.json({error:"invalid",navigate:"login"});
+                } 
+            }else{
+                return res.json({error:"invalid",navigate:"login"});   
+            }
+        }else{
+            return res.json({err,navigate:"login"});
+        }
+    })
+})
+
+
+
+router.get('/usertypes/:id',(req,res)=>{
     const id = req.params.id;
     query="select username,role from registration where id=?";
     connection.query(query,[id],(err,result)=>{

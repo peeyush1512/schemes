@@ -1,0 +1,32 @@
+<div class="card ">
+    <h1> National Vector Borne Disease Control Programme (NVBDCP) </h1>
+    <form [formGroup]="entryform" (submit)="formsubmit()" class="row">
+        <div class="d-flex field">
+            <label for="data1">AES cases Last Year</label>
+            <input type="number" matInput id="data1" formControlName="data1" placeholder="Last Year AES cases " required>
+        </div>
+        <div class="d-flex field">
+            <label for="data2">JE cases  Last Year </label>
+            <input type="number" matInput id="data2" formControlName="data2" placeholder="Last Year " required>
+        </div>
+        <div class="d-flex field">
+            <label for="data3">Death Last Year</label>
+            <input type="number" matInput id="data3" formControlName="data3" placeholder="Last Year " required>
+        </div>
+        <div class="d-flex field">
+            <label for="data4">AES cases This Year </label>
+            <input type="number" matInput id="data4" formControlName="data4" placeholder="This Year  " required>
+        </div>
+        <div class="d-flex field">
+            <label for="data5">JE cases This Year</label>
+            <input type="number" matInput id="data5" formControlName="data5" placeholder="This Year JE cases" required>
+        </div>
+        <div class="d-flex field">
+            <label for="data6">Death This Year </label>
+            <input type="number" matInput id="data6" formControlName="data6" placeholder="This Year " required>
+        </div>
+        <div class="button-primary d-flex field">
+            <button [disabled]="entryform.invalid" type="submit" mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+</div>

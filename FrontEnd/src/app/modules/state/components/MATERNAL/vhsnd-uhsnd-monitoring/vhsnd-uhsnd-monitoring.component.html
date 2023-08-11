@@ -1,91 +1,108 @@
 
-<!-- VHSND AND UHSND  -->
 <div>
-    <mat-card>
-        <mat-card-content>
-            <table id="vhsnd">
-                <tr > 
-                    <th rowspan="2">S.No.</th>
-                    <th rowspan="2">District</th>
-                    <th colspan="3">Total VHSND Monitoring Done</th>
-                </tr>
-                <tr>
-                    <th> VHSND</th>
-                    <th>UHSND</th>
-                    <th>Total</th>
-                </tr>
-                <tr *ngFor="let vhsnd_uhsnd of vhsnddata">
-                    <td class="id">{{vhsnd_uhsnd.id}}</td>
-                    <td class="district">{{vhsnd_uhsnd.district}}</td>
-                    <td class="vhsnd1">{{vhsnd_uhsnd.vhsnd}}</td>
-                    <td class="uhsnd">{{vhsnd_uhsnd.uhsnd}}</td>
-                    <td class="total">{{vhsnd_uhsnd.vhsnd + vhsnd_uhsnd.uhsnd}}</td>
+<iframe src="https://govthealth.cg.gov.in/vhsnd/RptVHSNDEntryStatus.aspx"  >
+
+</iframe>
+</div>
+
+
+
+
+
+
+<!-- <div>
+    <div> 
+        <mat-card>
+            <mat-card-content>
+                <table id="vhsnd">
+                    <tr > 
+                        <th rowspan="2">S.No.</th>
+                        <th rowspan="2">District</th>
+                        <th colspan="3">Total VHSND Monitoring Done</th>
+                    </tr>
+                    <tr>
+                        <th> VHSND</th>
+                        <th>UHSND</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr *ngFor="let vhsnd_uhsnd of vhsnddata">
+                        <td class="id">{{vhsnd_uhsnd.id}}</td>
+                        <td class="district">{{vhsnd_uhsnd.district}}</td>
+                        <td class="vhsnd1">{{vhsnd_uhsnd.vhsnd}}</td>
+                        <td class="uhsnd">{{vhsnd_uhsnd.uhsnd}}</td>
+                        <td class="total">{{vhsnd_uhsnd.vhsnd + vhsnd_uhsnd.uhsnd}}</td>
+                        
+                    </tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </div> 
+    <div class="card">
+                <table  mat-table [dataSource]="vhsnddata" class="mat-elevation-z8">
+                  <ng-container matColumnDef="index">
+                    <th mat-header-cell *matHeaderCellDef> S.No. </th>
+                    <td mat-cell *matCellDef="let element; let i = index;" >{{i+1}}</td>
+                  </ng-container>
+                    <ng-container matColumnDef="district">
+                      <th mat-header-cell *matHeaderCellDef>District Name</th>
+                      <td mat-cell *matCellDef="let element">
+                             {{element.district}}
+                      </td>
+                    </ng-container>
+                      <ng-container matColumnDef="vhsnd">
+                        <th mat-header-cell *matHeaderCellDef> VHSND  </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.vhsnd}}
+                      </td>
+                      </ng-container>
+                      
+                      <ng-container matColumnDef="uhsnd">
+                        <th mat-header-cell *matHeaderCellDef> UHSND  </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.uhsnd}}
+                      </td>
+                      </ng-container>  
+                      <ng-container matColumnDef="total">
+                        <th mat-header-cell *matHeaderCellDef> Total</th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.vhsnd + element.uhsnd}}
+                      </td>
+                      
+                      </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     
-                </tr>
+                  </table>
+    </div> <div class="card">
+        <mat-card>
+            <table mat-table [dataSource]="vhsnddata" class="mat-elevation-z8">
+                <ng-container matColumnDef="total"></ng-container>
             </table>
-        </mat-card-content>
-    </mat-card>
-</div>
-
-<div class="card">
-    <mat-card>
-        <table mat-table [dataSource]="vhsnddata" class="mat-elevation-z8">
-            <ng-container matColumnDef="total"></ng-container>
-        </table>
-    </mat-card>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div >
-    <mat-card>
-        <mat-card-content>
-            <h1> ANC Registration against ELA</h1>
-            <table id="anc">
-                <tr>
-                    <th >Percentage gradation </th>
-                    <th > Name of  District </th>
-                </tr>
-                <tr>
-                    <td> > 90%</td>
-                    <td  class="id" *ngFor="let data1 of data"><p *ngIf=" data1.value >89">{{data1.value}}</p></td>
-                </tr>
-                <tr>
-                    <td> 89% to 75%</td>
-                    <td class="id" ><li *ngFor="let data1 of data"> <mat-card> </mat-card> <div *ngIf=" data1.value >75 && data1.value <90">{{data1.value}}</div></li></td>
-                </tr>
-                <tr>
-                    <td>  < 75% </td>
-                    <td class="district" *ngFor="let data1 of data"><div *ngIf=" data1.value <75 ">{{data1.value}}</div></td>
-                </tr>
-            </table>
-        </mat-card-content>
-    </mat-card>
+        </mat-card>
+    </div>
+    <div >
+        <mat-card>
+            <mat-card-content>
+                <h1> ANC Registration against ELA</h1>
+                <table id="anc">
+                    <tr>
+                        <th >Percentage gradation </th>
+                        <th > Name of  District </th>
+                    </tr>
+                    <tr>
+                        <td> > 90%</td>
+                        <td  class="id" *ngFor="let data1 of data"><p *ngIf=" data1.value >89">{{data1.value}}</p></td>
+                    </tr>
+                    <tr>
+                        <td> 89% to 75%</td>
+                        <td class="id" ><li *ngFor="let data1 of data"> <mat-card> </mat-card> <div *ngIf=" data1.value >75 && data1.value <90">{{data1.value}}</div></li></td>
+                    </tr>
+                    <tr>
+                        <td>  < 75% </td>
+                        <td class="district" *ngFor="let data1 of data"><div *ngIf=" data1.value <75 ">{{data1.value}}</div></td>
+                    </tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </div> 
 </div> -->

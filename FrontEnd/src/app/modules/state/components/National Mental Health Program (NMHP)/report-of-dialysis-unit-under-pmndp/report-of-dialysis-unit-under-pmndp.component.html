@@ -1,1 +1,59 @@
-<p>report-of-dialysis-unit-under-pmndp works!</p>
+
+<div>
+    <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+        <ng-container matColumnDef="index">
+          <th mat-header-cell *matHeaderCellDef>S.No. </th>
+          <td mat-cell *matCellDef="let element;let i=index"> 
+            {{i+1}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="district">
+            <th mat-header-cell *matHeaderCellDef> Name of district </th>
+            <td mat-cell *matCellDef="let element">
+              {{element.district}}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="tdma">
+            <th mat-header-cell *matHeaderCellDef>Total Dialysis 
+                machine available
+                </th>
+            <td mat-cell *matCellDef="let element">
+              {{element.tdma }}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="psd">
+            <th mat-header-cell *matHeaderCellDef>Program 
+                started in 
+                District
+                 </th>
+            <td mat-cell *matCellDef="let element">
+              {{element.psd }}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="iumspmpd">
+            <th mat-header-cell *matHeaderCellDef> Ideal utilization of 
+                machine @ 3 session per 
+                machine per day</th>
+            <td mat-cell *matCellDef="let element">
+              {{element.iumspmpd }}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="tds">
+            <th mat-header-cell *matHeaderCellDef>  Total Dialysis Session </th>
+            <td mat-cell *matCellDef="let element">
+              {{element.tds }}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="pachiev">
+            <th mat-header-cell *matHeaderCellDef> Percentage 
+                achieved  </th>
+            <td mat-cell *matCellDef="let element">
+              {{element.pachiev }}
+          </td>
+          </ng-container>
+              
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+</div>

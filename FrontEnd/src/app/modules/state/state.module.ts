@@ -75,7 +75,7 @@ import { SuspectExaminationRateTHREEMONTHSComponent } from './components/Nationa
 import { PercentageofNotificationachievedagainstTargetComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/percentageof-notificationachievedagainst-target/percentageof-notificationachievedagainst-target.component';
 import { SuccessRateOFYEARComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/success-rate-of-year/success-rate-of-year.component';
 import { NPYPaymentOFYEARComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/npy-payment-of-year/npy-payment-of-year.component';
-import { AdoptionStatusOfTBPatientsByNikshayMitraComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/adoption-status-of-tb-patients-by-nikshay-mitra/adoption-status-of-tb-patients-by-nikshay-mitra.component';
+import { AdoptionStatusOfTBPatientsByNikshayMitraComponent } from './components/National Leprosy Eradication Programme/adoption-status-of-tb-patients-by-nikshay-mitra/adoption-status-of-tb-patients-by-nikshay-mitra.component';
 import { NewCaseFYComponent } from './components/National Leprosy Eradication Programme/new-case-fy/new-case-fy.component';
 import { PercentageOfGTWODAmongNewCaseComponent } from './components/National Leprosy Eradication Programme/percentage-of-g-two-d-among-new-case/percentage-of-g-two-d-among-new-case.component';
 import { PercentageOfChildCaseAmongNewCaseComponent } from './components/National Leprosy Eradication Programme/percentage-of-child-case-among-new-case/percentage-of-child-case-among-new-case.component';

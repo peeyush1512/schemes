@@ -1,12 +1,9 @@
- 
-<!-- ANC -->
-
 <div>
-        <table  mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <table  mat-table [dataSource]="data" class="mat-elevation-z8">
             <ng-container matColumnDef="percent">
               <th mat-header-cell *matHeaderCellDef>Percentage gradation </th>
-              <td mat-cell *matCellDef="let element"> 
-                <span *ngIf="element.percent == '90'">
+              <td mat-cell *matCellDef="let element" style="background-color: {{element.color}};"> 
+                <span  *ngIf="element.percent == '90'">
                      > 90 %
                 </span> 
                 <span *ngIf="element.percent == '89'">
@@ -20,20 +17,20 @@
             </ng-container>
             <ng-container matColumnDef="name">
               <th mat-header-cell *matHeaderCellDef> Name of district </th>
-              <td mat-cell *matCellDef="let element">
+              <td mat-cell *matCellDef="let element" style="background-color: {{element.color}};">
                 <span *ngIf="element.percent == '90'">
                    <ng-container *ngFor="let d of element.data">
-                    {{d.dist}}
+                    {{d.district}}({{d.ancela}} %) , 
                    </ng-container>
                 </span> 
                 <span *ngIf="element.percent == '89'">
                     <ng-container *ngFor="let d of element.data">
-                        {{d.dist}}
+                        {{d.district}}({{d.ancela}} %) , 
                        </ng-container>
                 </span> 
                 <span *ngIf="element.percent == '75'">
                     <ng-container *ngFor="let d of element.data">
-                        {{d.dist}}
+                        {{d.district}}({{d.ancela}} %) , 
                        </ng-container>
                 </span> 
             </td>

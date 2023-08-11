@@ -1,1 +1,46 @@
-<p>pregnant-women-received-four-or-more-anc works!</p>
+
+<div>
+    <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+      
+        <ng-container matColumnDef="percent">
+          <th mat-header-cell *matHeaderCellDef>Percentage gradation </th>
+          <!-- style="background-color: green;" -->
+          <td mat-cell *matCellDef="let element" style="background-color: {{element.color}};"> 
+            <span  *ngIf="element.percent == '90'">
+                 > 90 %
+            </span> 
+            <span *ngIf="element.percent == '89'">
+                89 to 75 % 
+            </span> 
+            <span *ngIf="element.percent == '75'">
+                < 75 %
+            </span> 
+    
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name of district </th>
+          <td mat-cell *matCellDef="let element" style="background-color: {{element.color}};">
+            <span *ngIf="element.percent == '90'">
+               <ng-container *ngFor="let d of element.data">
+                {{d.district}}({{d.pwrfomanc}} %) , 
+               </ng-container>
+            </span> 
+            <span *ngIf="element.percent == '89'">
+                <ng-container *ngFor="let d of element.data">
+                  {{d.district}}({{d.pwrfomanc}} %) ,
+                   </ng-container>
+            </span> 
+            <span *ngIf="element.percent == '75'">
+                <ng-container *ngFor="let d of element.data">
+                  {{d.district}}({{d.pwrfomanc}} %) ,
+                   </ng-container>
+            </span> 
+        </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+</div>

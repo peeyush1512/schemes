@@ -60,8 +60,8 @@ import { SuspectExaminationRateTHREEMONTHSComponent } from './components/Nationa
 import { PercentageofNotificationachievedagainstTargetComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/percentageof-notificationachievedagainst-target/percentageof-notificationachievedagainst-target.component';
 import { SuccessRateOFYEARComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/success-rate-of-year/success-rate-of-year.component';
 import { NPYPaymentOFYEARComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/npy-payment-of-year/npy-payment-of-year.component';
-import { AdoptionStatusOfTBPatientsByNikshayMitraComponent } from './components/National  Tuberculosis Elimination Programme (NTEP)/adoption-status-of-tb-patients-by-nikshay-mitra/adoption-status-of-tb-patients-by-nikshay-mitra.component';
 import { NewCaseFYComponent } from './components/National Leprosy Eradication Programme/new-case-fy/new-case-fy.component';
+import { AdoptionStatusOfTBPatientsByNikshayMitraComponent } from './components/National Leprosy Eradication Programme/adoption-status-of-tb-patients-by-nikshay-mitra/adoption-status-of-tb-patients-by-nikshay-mitra.component';
 import { PercentageOfGTWODAmongNewCaseComponent } from './components/National Leprosy Eradication Programme/percentage-of-g-two-d-among-new-case/percentage-of-g-two-d-among-new-case.component';
 import { PercentageOfChildCaseAmongNewCaseComponent } from './components/National Leprosy Eradication Programme/percentage-of-child-case-among-new-case/percentage-of-child-case-among-new-case.component';
 import { PercentageOfMBCaseAmongNewCaseComponent } from './components/National Leprosy Eradication Programme/percentage-of-mb-case-among-new-case/percentage-of-mb-case-among-new-case.component';
@@ -144,8 +144,8 @@ const routes: Routes = [{
   path: "", component: CommonComponent,
   children: [
     { path: "dashboard", component: DashboardComponent },
-    { path: "vhsnd-uhsnd", component: VHSNDUHSNDMonitoringComponent },
     { path: "", redirectTo: '/state/dashboard', pathMatch: 'full' },
+    { path: "vhsnd-uhsnd", component: VHSNDUHSNDMonitoringComponent },
     { path: "ANCELAComponent", component: ANCELAComponent },
     { path: "ANCFIRSTComponent", component: ANCFIRSTComponent },
     { path: "PregnantWomenReceivedFOUROrMoreANCComponent", component: PregnantWomenReceivedFOUROrMoreANCComponent },
@@ -202,7 +202,7 @@ const routes: Routes = [{
     { path: "PercentageofNotificationachievedagainstTargetComponent", component: PercentageofNotificationachievedagainstTargetComponent },
     { path: "SuccessRateOFYEARComponent", component: SuccessRateOFYEARComponent },
     { path: "NPYPaymentOFYEARComponent", component: NPYPaymentOFYEARComponent },
-    { path: "AdoptionStatusOfTBPatientsByNikshayMitraComponent", component: AdoptionStatusOfTBPatientsByNikshayMitraComponent },
+    { path: "AdoptionStatusOfTBPatientsByNikshayMitraComponent",component:AdoptionStatusOfTBPatientsByNikshayMitraComponent},
     { path: "NewCaseFYComponent", component: NewCaseFYComponent },
     { path: "PercentageOfGTWODAmongNewCaseComponent", component: PercentageOfGTWODAmongNewCaseComponent },
     { path: "PercentageOfChildCaseAmongNewCaseComponent", component: PercentageOfChildCaseAmongNewCaseComponent },
@@ -271,14 +271,14 @@ const routes: Routes = [{
     { path: "NABLCertificationStatusOfICTCsChhattisgarhComponent", component: NABLCertificationStatusOfICTCsChhattisgarhComponent },
     { path: "DocumentsRequiredForNABLCertificationComponent", component: DocumentsRequiredForNABLCertificationComponent },
     { path: "DistrictWiseLFUAndViralLoadPendencyComponent", component: DistrictWiseLFUAndViralLoadPendencyComponent },
-    {path:"NationalHealthMissionFinancialProgressReportComponent",component:NationalHealthMissionFinancialProgressReportComponent},
-    {path:"AllDistrictFinancialReportComponent",component:AllDistrictFinancialReportComponent},
-    {path:"NationalHealthMissionChhattisgarhRANKINGAsPerFMRReportAsOnFYInLakhComponent2",component:NationalHealthMissionChhattisgarhRANKINGAsPerFMRReportAsOnFYInLakhComponent2},
-    {path:"NationalHealthMissionFinancialProgressReportComponent2",component:NationalHealthMissionFinancialProgressReportComponent2},
-    {path:"HatBajarLatitudeAndLongitudeComponent",component:HatBajarLatitudeAndLongitudeComponent},
-    {path:"DistrictWiseViheiclesComponent",component:DistrictWiseViheiclesComponent},
-    {path:"DistrictWiseEntryAndTritmentComponent",component:DistrictWiseEntryAndTritmentComponent},
-    {path:"DistrictWiseMarijoKiAverageComponent",component:DistrictWiseMarijoKiAverageComponent},
+    { path:"NationalHealthMissionFinancialProgressReportComponent",component:NationalHealthMissionFinancialProgressReportComponent},
+    { path:"AllDistrictFinancialReportComponent",component:AllDistrictFinancialReportComponent},
+    { path:"NationalHealthMissionChhattisgarhRANKINGAsPerFMRReportAsOnFYInLakhComponent2",component:NationalHealthMissionChhattisgarhRANKINGAsPerFMRReportAsOnFYInLakhComponent2},
+    { path:"NationalHealthMissionFinancialProgressReportComponent2",component:NationalHealthMissionFinancialProgressReportComponent2},
+    { path:"HatBajarLatitudeAndLongitudeComponent",component:HatBajarLatitudeAndLongitudeComponent},
+    { path:"DistrictWiseViheiclesComponent",component:DistrictWiseViheiclesComponent},
+    { path:"DistrictWiseEntryAndTritmentComponent",component:DistrictWiseEntryAndTritmentComponent},
+    { path:"DistrictWiseMarijoKiAverageComponent",component:DistrictWiseMarijoKiAverageComponent},
   ]
 }];
 

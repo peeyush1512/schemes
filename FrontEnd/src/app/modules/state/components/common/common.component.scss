@@ -1,27 +1,36 @@
 
 .mat-sidenav{
     background:white(255, 255, 255);
-    width:50vh;
-    height: 100%;
+    width:60vh;
+    height: 120vh;
 }
 
+mat-sidenav-container{
+  height: 100%;
+  margin-bottom: 40px;
+}
 .nav{
     position: sticky;
     top: 0;
     }
-
 mat-sidenav-content{
-    height: 100vh;
+    height: 120vh ;
+    // margin-bottom: 100px;
     background: rgb(250, 252, 252);
     .main{
         margin-left: 25px;
     }
 }
+.thisactive{
+  font-weight: bold!important;;
+  background-color: aquamarine;
+}
 
 mat-toolbar{
+  background-color: #030a8f;
     mat-icon{
         margin-left: 15px;
-        color: grey;
+        color: rgb(255, 255, 255);
     }
     justify-content: space-between;
 
@@ -29,29 +38,59 @@ mat-toolbar{
         margin-top: 8px;
     }
 }
+
 mat-expansion-panel-header{
   height: fit-content;
   text-align: left;
 }
-a:hover{
-  width: 100vh;
-  
+a{
+  // position: relative;
+  // display: inline-block;
+  // border-bottom: 1px dotted black;
+  text-align: left;
 }
+.headertop{
+  margin-bottom: 10px;
+}
+.leftfloat{
+  float: left!important;
+}
+// a:hover .tooltiptext{
+//   visibility: visible;
+  
+// }
+
+// a .tooltiptext {
+//   visibility: hidden;
+//   overflow: show;
+//   width: 250px;
+//   background-color: black;
+//   color: #fff;
+//   text-align: center;
+//   border-radius: 6px;
+//   padding: 5px 0;
+
+//   /* Position the tooltip */
+//   position: left;
+//   z-index: 1;
+// }
+
 mat-panel-title{
   float: right;
   text-align: left;
 }
-a{
-  text-align: left;
-}
+
 mat-list-item{
   width: fit-content;
   height: fit-content;
 }
 .logout{
   float: right!important;
-    padding-right:25%;
+    padding-right:5%;
     cursor: pointer;
+}
+.logout:hover{
+  background-color:#54e8f0 ;
 }
 .user{
     font-size: 13px;

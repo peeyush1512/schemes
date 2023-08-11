@@ -1,1 +1,71 @@
-<p>high-risk-pregnancy works!</p>
+<div mat-card>
+    <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+      <ng-container matColumnDef="index">
+        <th mat-header-cell *matHeaderCellDef> S.No. </th>
+        <td mat-cell *matCellDef="let element; let i = index;" >{{i+1}}</td>
+      </ng-container>
+        <ng-container matColumnDef="district">
+          <th mat-header-cell *matHeaderCellDef>District Name</th>
+          <!-- style="background-color: green;" -->
+          <td mat-cell *matCellDef="let element">
+                 {{element.district}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="pmsma" >
+            <th mat-header-cell *matHeaderCellDef> Total number 
+                of pregnant 
+                women 
+                Received 
+                Antenatal 
+                care under 
+                PMSMA </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.pmsma}}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="hrp">
+            <th mat-header-cell *matHeaderCellDef> Total HRP 
+                identified </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.hrp}}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="perhrp">
+            <th mat-header-cell *matHeaderCellDef> % HRP 
+                identified 
+                (against ELA 
+                i.e. 15%) </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.perhrp}}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="tmr">
+            <th mat-header-cell *matHeaderCellDef>Total 
+                Managed or 
+                referred </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.tmr}}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="pertmr">
+            <th mat-header-cell *matHeaderCellDef>% managed 
+                & reffered
+                </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.pertmr}}
+          </td>
+          </ng-container>
+          <ng-container matColumnDef="nottmr">
+            <th mat-header-cell *matHeaderCellDef> 
+                Difference neither managed nor reffered against identified </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.nottmr}}
+          </td>
+          </ng-container>
+                  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+</div>
+

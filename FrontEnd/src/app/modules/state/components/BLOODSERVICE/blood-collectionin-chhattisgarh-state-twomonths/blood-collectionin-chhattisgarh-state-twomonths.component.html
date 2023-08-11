@@ -1,1 +1,88 @@
-<p>blood-collectionin-chhattisgarh-state-twomonths works!</p>
+
+<div class="card">
+    <mat-card>
+        <div mat-card>
+            <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+              <ng-container matColumnDef="index">
+                <th mat-header-cell *matHeaderCellDef> S.No. </th>
+                <td mat-cell *matCellDef="let element; let i = index;" >{{i+1}}</td>
+              </ng-container>
+                <ng-container matColumnDef="district">
+                  <th mat-header-cell *matHeaderCellDef>District Name</th>
+                  <!-- style="background-color: green;" -->
+                  <td mat-cell *matCellDef="let element">
+                         {{element.district}}
+                  </td>
+                </ng-container>
+                  <ng-container matColumnDef="pp">
+                    <th mat-header-cell *matHeaderCellDef> Projected 
+                        Population 
+                        now</th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.pp}}
+                  </td>
+                  </ng-container>
+                  
+                  <ng-container matColumnDef="tbcpprb">
+                    <th mat-header-cell *matHeaderCellDef>Target for blood 
+                        collection (about 1 
+                        % of popn 
+                        requires blood) </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.tbcpprb}}
+                  </td>
+                  </ng-container>  
+                  <ng-container matColumnDef="targettwo">
+                    <th mat-header-cell *matHeaderCellDef>Target for 
+                        last few months</th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.targettwo}}
+                  </td>
+                  </ng-container>
+                  <ng-container matColumnDef="tcgovt">
+                    <th mat-header-cell *matHeaderCellDef>Total 
+                        Collection 
+                        in Govt 
+                        Blood 
+                        Banks
+                         </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.tcgovt}}
+                  </td>
+                  </ng-container>
+                  <ng-container matColumnDef="tcprivate">
+                    <th mat-header-cell *matHeaderCellDef>TTotal 
+                        Collection 
+                        in Private 
+                        Blood 
+                        Banks
+                        Grand Total 
+                        Collection
+                         </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.tcprivate}}
+                  </td>
+                  </ng-container>
+                  <ng-container matColumnDef="GTBCollection">
+                    <th mat-header-cell *matHeaderCellDef> Grand Total 
+                        Collection
+                        </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.GTBCollection}}
+                  </td>
+                  </ng-container>
+                  <ng-container matColumnDef="percentage">
+                    <th mat-header-cell *matHeaderCellDef>Percentage 
+                        collection</th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.percentage}}
+                  </td>
+                  </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                
+              </table>
+              
+        </div>
+    </mat-card>
+</div>

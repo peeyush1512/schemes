@@ -1,0 +1,16 @@
+<div class="card ">
+    <h1>Full Immunization Coverage in %</h1>
+    <form [formGroup]="ficipform" (submit)="ficipsubmit()" class="row">
+        <div class="d-flex">
+            <label for="lastyear">Last  Year Percentage</label>
+            <input type="number" matInput id="lastyear" formControlName="lastyear" placeholder="Last Year Percentage" required>
+        </div>
+        <div class="d-flex">
+            <label for="thisyear">This  Year Percentage</label>
+            <input type="number" matInput id="thisyear" formControlName="thisyear" placeholder="this Year Percentage" required>
+        </div>
+        <div class="button-primary">
+            <button [disabled]="ficipform.invalid" type="submit" mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+</div>

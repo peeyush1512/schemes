@@ -1,1 +1,46 @@
-<p>successful-discharge-rateat-nutrition-rehabilitation-centres works!</p>
+
+
+<div>
+    <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+        <ng-container matColumnDef="percent">
+          <th mat-header-cell *matHeaderCellDef>Percentage gradation </th>
+          <!-- style="background-color: green;" -->
+          <td mat-cell *matCellDef="let element" style="background-color: {{element.color}};"> 
+            <span  *ngIf="element.percent == '76'">
+                 > 75 %
+            </span> 
+            <span *ngIf="element.percent == '50'">
+                75 to 50 % 
+            </span> 
+            <span *ngIf="element.percent == '49'">
+                < 50 %
+            </span> 
+    
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name of district </th>
+          <td mat-cell *matCellDef="let element"style="background-color: {{element.color}};">
+            <span *ngIf="element.percent == '76'">
+               <ng-container *ngFor="let d of element.data">
+                {{d.district}} ({{d.sdrnrc}}%) , 
+               </ng-container>
+            </span> 
+            <span *ngIf="element.percent == '50'">
+                <ng-container *ngFor="let d of element.data">
+                  {{d.district}} ({{d.sdrnrc}}%) , 
+                   </ng-container>
+            </span> 
+            <span *ngIf="element.percent == '49'">
+                <ng-container *ngFor="let d of element.data">
+                  {{d.district}} ({{d.sdrnrc}}%) , 
+                   </ng-container>
+            </span> 
+        </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+</div>

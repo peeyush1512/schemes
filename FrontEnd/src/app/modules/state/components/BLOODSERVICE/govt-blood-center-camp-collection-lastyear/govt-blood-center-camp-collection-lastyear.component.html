@@ -1,1 +1,47 @@
-<p>govt-blood-center-camp-collection-lastyear works!</p>
+
+<div class="card">
+    <mat-card>
+        <div mat-card>
+            <table  mat-table [dataSource]="data" class="mat-elevation-z8">
+              <ng-container matColumnDef="index">
+                <th mat-header-cell *matHeaderCellDef> S.No. </th>
+                <td mat-cell *matCellDef="let element; let i = index;" >{{i+1}}</td>
+              </ng-container>
+                <ng-container matColumnDef="district">
+                  <th mat-header-cell *matHeaderCellDef>District Name</th>
+                  <!-- style="background-color: green;" -->
+                  <td mat-cell *matCellDef="let element">
+                         {{element.district}}
+                  </td>
+                </ng-container>
+                  <ng-container matColumnDef="tcapm">
+                    <th mat-header-cell *matHeaderCellDef>Total camp</th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.tcapm}}
+                  </td>
+                  </ng-container>
+                  
+                  <ng-container matColumnDef="capmcollection">
+                    <th mat-header-cell *matHeaderCellDef>Camp 
+                        Collection </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.capmcollection}}
+                  </td>
+                  </ng-container>  
+                  <ng-container matColumnDef="avgper">
+                    <th mat-header-cell *matHeaderCellDef>Average 
+                        collection 
+                        per camp
+                        </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.avgper}}
+                  </td>
+                  </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                
+              </table>
+              
+        </div>
+    </mat-card>
+</div>

@@ -1,1 +1,35 @@
-<p>per-injectable-mpa-users-among-eligiblecouples works!</p>
+<div class="card">
+    <div class="d-flex">
+        <div class="chart">
+            <canvas id="chart" height="300px" width="400px">{{chart}}</canvas>
+        </div>
+
+        <div class="table">
+            <table mat-table [dataSource]="data1" class="mat-elevation-z8">
+                <ng-container matColumnDef="index">
+                    <th mat-header-cell *matHeaderCellDef>S.No. </th>
+                    <td mat-cell *matCellDef="let element;let i=index">
+                        {{i+1}}
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="district">
+                    <th mat-header-cell *matHeaderCellDef> Name of District</th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.district}}
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="pimpa">
+                    <th mat-header-cell *matHeaderCellDef>% Injec. MPA </th>
+                    <td mat-cell *matCellDef="let element">
+                        {{element.pimpa }}
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+        </div>
+        <div>
+
+        </div>
+    </div>
